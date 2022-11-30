@@ -26,7 +26,7 @@ export abstract class EntityRepository<T extends Document> {
         return entity.save();
     }
 
-    async finOneAndUpdate(
+    async findOneAndUpdate(
         entityFilterQuery: FilterQuery<T>,
         updateEntityData: UpdateQuery<unknown>
     ): Promise<T> {
